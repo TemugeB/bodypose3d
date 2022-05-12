@@ -87,8 +87,8 @@ def run_mp(input_stream1, input_stream2, P0, P1):
         if results1.pose_landmarks:
             for i, landmark in enumerate(results1.pose_landmarks.landmark):
                 if i not in pose_keypoints: continue
-                pxl_x = landmark.x * frame0.shape[1]
-                pxl_y = landmark.y * frame0.shape[0]
+                pxl_x = landmark.x * frame1.shape[1]
+                pxl_y = landmark.y * frame1.shape[0]
                 pxl_x = int(round(pxl_x))
                 pxl_y = int(round(pxl_y))
                 cv.circle(frame1,(pxl_x, pxl_y), 3, (0,0,255), -1)
